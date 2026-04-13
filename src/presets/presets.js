@@ -1,3 +1,5 @@
+const BASE = import.meta.env.BASE_URL;
+
 const animalFiles = [
   "hiir.jpg",
   "hobune.jpg",
@@ -39,7 +41,7 @@ function buildItems(folder, files) {
     const label = filename.replace(/\.[^/.]+$/, "");
     return {
       label,
-      src: `/presets/${folder}/${filename}`,
+      src: `${BASE}presets/${folder}/${filename}`,
     };
   });
 }
